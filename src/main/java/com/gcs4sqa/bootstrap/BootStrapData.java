@@ -23,7 +23,7 @@ public class BootStrapData implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
 
         Publisher penguin = new Publisher("Penguin", "1 Sibsey Court", "Grimsby", "NELincs", "DN37 9FD");
         publisherRepository.save(penguin);
@@ -58,7 +58,6 @@ public class BootStrapData implements CommandLineRunner {
         System.out.println("Starting BootStrap");
         System.out.println("Number of Books = " + bookRepository.count());
         System.out.println("Here's the details of a publisher " + publisherRepository.findAll() );
-
         System.out.println("number of books for publisher = " + penguin.getBook().size());
 
 
